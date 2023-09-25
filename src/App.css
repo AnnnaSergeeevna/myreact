@@ -1,5 +1,6 @@
 .App-wrapper {
   display: grid;
+  min-height: 100%;
   grid-template-columns: 1fr 5fr;
   grid-template-areas:
     "head head"
@@ -27,3 +28,10 @@
 }
 
 .tools {}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#div {}
