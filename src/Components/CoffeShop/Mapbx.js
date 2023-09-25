@@ -6,9 +6,9 @@ export default function Mapbx() {
         mapboxgl.accessToken = "pk.eyJ1Ijoid3JremciLCJhIjoiY2w1MTRsMW41MDI0ejNkcnliczMyNmpjNyJ9.Oydx12NzpiCwXiQ8qKG9-Q";
         const map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/dark-v10',
-            center: [-4.41942, 36.72199],
-            zoom: 10
+            style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
+            center: [-4.42640, 36.72199],
+            zoom: 11
         })
         return () => {
             map.remove();
