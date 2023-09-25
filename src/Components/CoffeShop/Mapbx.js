@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
 
 export default function Mapbx() {
