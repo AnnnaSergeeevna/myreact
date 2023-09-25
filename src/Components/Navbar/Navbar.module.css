@@ -1,4 +1,3 @@
-
 .nav {
   grid-area: nav;
   background-color: rgb(138, 36, 36);
@@ -7,15 +6,16 @@
   padding-left: 15px;
   padding-right: 15px;
   font-size: x-large;
-  
+
 }
+
 .item {
   background-color: rgb(138, 36, 36);
   color: rgb(255, 251, 251);
   padding-top: 15px;
-  padding-left: 15px;
   font-size: xx-large;
 }
+
 a:link {
   color: #FFF;
   text-decoration: none;
@@ -33,6 +33,7 @@ a:hover {
 a:active {
   color: #edd19b;
 }
+
 .item a.active {
   color: rgb(255, 255, 255);
   font-size: xx-large;
