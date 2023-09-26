@@ -7,7 +7,7 @@ export default function Mapbx() {
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
-            center: [-4.42640, 36.72199],
+            center: [-4.42642, 36.7199],
             zoom: 11
         })
         return () => {
