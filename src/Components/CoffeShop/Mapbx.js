@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
+import mapboxgl from "mapbox-gl";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 export default function Mapbx() {
     mapboxgl.accessToken = "pk.eyJ1Ijoid3JremciLCJhIjoiY2w1MTRsMW41MDI0ejNkcnliczMyNmpjNyJ9.Oydx12NzpiCwXiQ8qKG9-Q";
 
-    const [marker, setMarker] = useState([-4.419433426314117, 36.72012315620705]);
+    const [marker, setMarker] = useState([-4.4491762, 36.69364739434165]);
 
     useEffect(() => {
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
             center: marker,
-            zoom: 11,
+            zoom: 13,
         });
 
         const newMarker = new mapboxgl.Marker()
@@ -22,7 +23,7 @@ export default function Mapbx() {
             newMarker.remove();
             map.remove();
         };
-    }, []);
+    }, [marker]);
 
     const handleCoffeeShopChange = (event) => {
         const selectedCoffeShop = event.target.value;
