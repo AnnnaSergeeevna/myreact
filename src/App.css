@@ -26,12 +26,6 @@
 
 .App-wrapper-content img {}
 
-#myCanvas {
-  background-image: linear-gradient(to left, rgb(225, 159, 159), rgb(255, 255, 255));
-  width: 500px;
-  height: 450px;
-}
-
 .tools {}
 
 .time {

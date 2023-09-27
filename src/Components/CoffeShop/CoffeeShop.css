@@ -16,12 +16,12 @@
   margin: auto;
   position: absolute;
   vertical-align: middle;
-  font-family: Helvetica;
+  font-family: serif;
   font-size: medium;
 }
 
 .App-logo {
-  font-family: Helvetica;
+  font-family: serif;
   background-color: (245, 244, 244);
   font-size: large;
   margin-left: 10px;
@@ -43,7 +43,7 @@ h3 {
 }
 
 .uititle {
-  font-family: Helvetica;
+  font-family: serif;
 }
 
 .disabled {
@@ -162,6 +162,11 @@ h4 {
   width: 400px;
   height: 300px;
   margin-left: 10px;
-  font-family: Helvetica;
-  color: black;
+}
+
+.map-overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 0px;
+  align-items: center;
+  justify-content: space-between;
 }

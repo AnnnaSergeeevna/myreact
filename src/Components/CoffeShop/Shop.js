@@ -3,6 +3,7 @@ import AddItemForm from "./AddItemForm";
 import ItemList from "./ItemList";
 import Mapbx from "./Mapbx";
 import { v4 as uuidv4 } from "uuid";
+import classes from '../../App.css';
 
 export default function Shop(props) {
     const [theme, setTheme] = useState({
@@ -48,8 +49,7 @@ export default function Shop(props) {
             <div>
                 <ItemList items={items} removeItem={removeItem} />
             </div>
-            <h4>Find us</h4>
-            <div id="map">
+            <div>
                 <Mapbx />
             </div>
         </>
