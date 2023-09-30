@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddItemForm from "./AddItemForm";
 import ItemList from "./ItemList";
 import Mapbx from "./Mapbx";
@@ -12,9 +12,18 @@ export default function Shop(props) {
     });
     const classNames = theme.uititle ? "uititle" : "disabled";
 
-    const [items, setItem] = useState([]);
+    const [items, setItem] = useState(() => {
+        const storedItems = JSON.parse(localStorage.getItem("items"));
+        return storedItems || [];
+    });
+
     const [name, setName] = useState("");
     const [desc, setDesc] = useState("");
+
+    useEffect(() => {
+        localStorage.setItem("items", JSON.stringify(items))
+    }, [items])
+
     function handleFormSubmit(event) {
         event.preventDefault();
         const id = uuidv4();
@@ -23,6 +32,7 @@ export default function Shop(props) {
             name: name,
             desc: desc
         };
+
         if (items.length === 0) {
             setTheme({ ...theme, uititle: false });
         }
