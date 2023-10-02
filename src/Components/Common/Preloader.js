@@ -1,8 +1,8 @@
 import classes from './Preloader.module.css';
-import preloader from '../Common/Pusheen.gif';
+import preloader from '../Common/loading.gif';
 let Preloader = (props) => {
-    return <div className={classes.pusheen}> 
-    <img src={preloader} /> 
+    return <div className={classes.preloader}>
+        <img src={preloader} />
     </div>
 }
 export default Preloader;

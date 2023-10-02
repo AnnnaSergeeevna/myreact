@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import classes from '../../src/App.css';
+import classes from './News.css';
+import Cards from "./Cards";
 
 function News() {
     const [date, setDate] = useState(new Date())
@@ -14,6 +15,7 @@ function News() {
     }, [])
     return <>
         <h2>News</h2>
+        <p>2 Oct 2023, 17:35:47. I added animated Cards <Cards /></p>
         <div className="time">{date.toLocaleTimeString()}</div>
     </>
 

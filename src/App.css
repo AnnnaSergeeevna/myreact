@@ -23,12 +23,3 @@
   text-align: left;
   padding-left: 10px;
 }
-
-.App-wrapper-content img {}
-
-.tools {}
-
-.time {
-  display: flex;
-  justify-content: flex-end;
-}
