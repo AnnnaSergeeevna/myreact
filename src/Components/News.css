@@ -31,8 +31,9 @@
 
 button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-top: 30px;
   font-size: large;
   border-radius: 15px;
   color: rgb(108, 81, 1);

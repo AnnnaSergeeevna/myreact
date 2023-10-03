@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { render } from "react-dom"
 import Preloader from "../Components/Common/Preloader"
 import classes from './News.css';
@@ -9,26 +9,20 @@ export default function Cards() {
     const [loader, setLoader] = useState(false)
 
     function handleButtonClick() {
+        setLoader(true)
         fetch("https://deckofcardsapi.com/api/deck/new/draw/?count=3")
             .then(response => response.json())
             .then(data => {
                 if (data && data.cards) {
                     setCards(data.cards)
                 }
-                setLoader(true);
             })
             .catch(error => {
                 console.error(error)
             })
             .finally(() => setLoader(false))
     }
-    // if (loader) {
-    //     return (
-    //         <div>
-    //             <Preloader />
-    //         </div>
-    //     );
-    // }
+
     return <>
         <div className="button">
             <button onClick={handleButtonClick} disabled={loader}>Push for download cards</button>
