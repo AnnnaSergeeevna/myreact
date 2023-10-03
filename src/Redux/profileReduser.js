@@ -1,4 +1,4 @@
-import {  profileAPI } from "../API/API";
+import { profileAPI } from "../API/API";
 
 const ADD_POST = 'ADD_POST'
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
@@ -6,8 +6,8 @@ const SET_STATUS = 'SET_STATUS'
 
 let initialState = {
     posts: [
-        { id: 1, message: 'This is my first post!', likesCount: 2 },
-        { id: 2, message: 'Ohhh i so need to hug somebody!', likesCount: 4 }],
+        { id: 1, message: 'This is my first React App ⚛️', likesCount: 2 },
+        { id: 2, message: 'Ohhh i so proud myself!', likesCount: 4 }],
     profile: null,
     status: ''
 }
@@ -18,7 +18,7 @@ const profileReduser = (state = initialState, action) => {
             stateCopy.posts = [...state.posts]
             stateCopy.posts.push({
                 id: 3,
-                message: action.values, 
+                message: action.values,
                 likesCount: 0
             })
             stateCopy.values = 'newPostText'
@@ -28,7 +28,7 @@ const profileReduser = (state = initialState, action) => {
             return { ...state, profile: action.profile }
         }
         case SET_STATUS: {
-            return { ...state, status: action.status }  
+            return { ...state, status: action.status }
         }
         default:
             return state
@@ -51,7 +51,8 @@ export const getStatus = (userId) => (dispatch) => {
 export const updateStatus = (status) => (dispatch) => {
     profileAPI.updateStatus(status).then(data => {
         if (data.resultCode === 0) {
-        dispatch(setStatus(status))}
+            dispatch(setStatus(status))
+        }
     })
 }
 

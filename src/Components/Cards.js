@@ -6,42 +6,43 @@ import classes from './News.css';
 
 export default function Cards() {
     const [cards, setCards] = useState()
-    const [loader, setLoader] = useState(true)
+    const [loader, setLoader] = useState(false)
 
-    useEffect(() => {
+    function handleButtonClick() {
         fetch("https://deckofcardsapi.com/api/deck/new/draw/?count=3")
             .then(response => response.json())
             .then(data => {
                 if (data && data.cards) {
                     setCards(data.cards)
                 }
-                setLoader(false);
+                setLoader(true);
             })
             .catch(error => {
                 console.error(error)
             })
             .finally(() => setLoader(false))
-    }, [])
-    if (loader) {
-        return (
-            <div>
-                <Preloader />
-            </div>
-        );
     }
-    return (
-        <>
-            <h3>Cards:</h3>
-            <div className="cards">
-                {loader && <Preloader />}
-                {cards && cards.map(card => (
-                    <li key={card.code}>
-                        <img className={classes.cards} src={card.image} alt={card.code} />
-                    </li>
-                ))}
-            </div>
-        </>
-    );
+    // if (loader) {
+    //     return (
+    //         <div>
+    //             <Preloader />
+    //         </div>
+    //     );
+    // }
+    return <>
+        <div className="button">
+            <button onClick={handleButtonClick} disabled={loader}>Push for download cards</button>
+        </div>
+        <h3>Cards:</h3>
+        <div className="cards">
+            {loader && <Preloader />}
+            {cards && cards.map(card => (
+                <li key={card.code}>
+                    <img className={classes.cards} src={card.image} alt={card.code} />
+                </li>
+            ))}
+        </div>
+    </>
 }
 
 

@@ -28,3 +28,15 @@
 .cards img {
   height: 150px;
 }
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: large;
+  border-radius: 15px;
+  color: rgb(108, 81, 1);
+  border-color: rgb(163, 142, 86);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
