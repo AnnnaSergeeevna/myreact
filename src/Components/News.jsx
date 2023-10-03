@@ -15,7 +15,7 @@ function News() {
     }, [])
     return <>
         <h2>News</h2>
-        <p>2 Oct 2023, 17:35:47. I added animated Cards <Cards /></p>
+        <p>2 Oct 2023, 17:35:47. I added animated Cards, they appear randomly from the API <Cards /></p>
         <div className="time">{date.toLocaleTimeString()}</div>
     </>
 

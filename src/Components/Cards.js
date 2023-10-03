@@ -12,22 +12,26 @@ export default function Cards() {
         fetch("https://deckofcardsapi.com/api/deck/new/draw/?count=3")
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                if (data) {
+                if (data && data.cards) {
                     setCards(data.cards)
                 }
+                setLoader(false);
             })
             .catch(error => {
-                setLoader(false)
                 console.error(error)
             })
             .finally(() => setLoader(false))
-
     }, [])
-
+    if (loader) {
+        return (
+            <div>
+                <Preloader />
+            </div>
+        );
+    }
     return (
         <>
-            <h1>Cards:</h1>
+            <h3>Cards:</h3>
             <div className="cards">
                 {loader && <Preloader />}
                 {cards && cards.map(card => (
@@ -39,3 +43,5 @@ export default function Cards() {
         </>
     );
 }
+
+

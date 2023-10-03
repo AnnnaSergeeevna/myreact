@@ -5,19 +5,7 @@
   text-align: left;
   padding-left: 10px;
   display: flex;
-  overflow: hidden;
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(-100%);
-    /* Начальное смещение влево за пределы экрана */
-  }
-
-  to {
-    transform: translateX(0);
-    /* Конечное смещение вправо на исходную позицию */
-  }
+  /* overflow: hidden; */
 }
 
 .time {
@@ -34,7 +22,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  animation: slideRight 3s ease;
+  /* animation: slideRight 13s ease; */
 }
 
 .cards img {
