@@ -40,7 +40,7 @@ export default function Mapbx() {
     return (
         <>
             <div className="map-overlay">
-                <h3>Choose coffee shop: </h3>
+                <h3>Select the store: </h3>
                 <select className="ui-textfield" onChange={handleCoffeeShopChange}>
                     <option value="100coffee">100% Coffee</option>
                     <option value="nextLevel">next Level</option>

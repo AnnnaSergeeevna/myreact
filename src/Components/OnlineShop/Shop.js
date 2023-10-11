@@ -50,7 +50,7 @@ export default function Shop(props) {
 
     return (
         <>
-            <h3 className={classNames}>Choose your drink ☕️</h3>
+            <h3 className={classNames}>Choose your goods</h3>
             <div>
                 <AddItemForm name={name} desc={desc} onNameChange={(e) => setName(e.target.value)} onDescChange={(e) => setDesc(e.target.value)} onFormSubmit={handleFormSubmit} />
             </div>

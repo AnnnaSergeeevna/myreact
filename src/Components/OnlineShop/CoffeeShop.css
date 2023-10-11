@@ -25,16 +25,19 @@
 }
 
 .App-logo {
+  display: flex;
   font-family: serif;
   background-color: (245, 244, 244);
-  font-size: large;
   margin-left: 10px;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+  font-size: x-large;
+  align-items: center;
 }
 
 .App-logo img {
   height: 100px;
+  margin-right: 40px;
 }
 
 h3 {
@@ -97,7 +100,7 @@ h3 {
 }
 
 [class^="ui-"] {
-  margin: 10px;
+  margin-left: 10px;
 }
 
 .ui-list {
@@ -107,7 +110,7 @@ h3 {
 }
 
 .ui-item-list {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .item-info {
@@ -121,7 +124,7 @@ h3 {
 .item-quantity {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .item-button {
@@ -159,7 +162,7 @@ h3 {
 
 h4 {
   margin-left: 10px;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 
 #map {

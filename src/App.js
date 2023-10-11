@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import classes from './App.css';
 import Navbar from '../src/Components/Navbar/Navbar.jsx';
 import Footer from '../src/Components/Footer/Footer.jsx';
-import CoffeeShop from '../src/Components/CoffeShop/CoffeeShop';
+import OnlineShop from '../src/Components/OnlineShop/OnlineShop';
 import News from './Components/News';
 import Settings from './Components/Settings';
 import { Routes, Route } from 'react-router-dom';
@@ -29,7 +29,7 @@ const App = (props) => {
           <Route path='/payment' element={<Payment />}></Route>
           {/* <Route path='/canvas' element={<CanvasContainer />}></Route> */}
           <Route path='/news' element={<News />}></Route>
-          <Route path='/online-coffee-shop' element={<CoffeeShop />}></Route>
+          <Route path='/online-shop' element={<OnlineShop />}></Route>
           <Route path='/settings' element={<Settings />}></Route>
           <Route path='/login' element={<Login />}></Route>
         </Routes>
