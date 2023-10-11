@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import AddItemForm from "./AddItemForm";
 import ItemList from "./ItemList";
@@ -12,18 +14,28 @@ export default function Shop(props) {
     });
     const classNames = theme.uititle ? "uititle" : "disabled";
 
+    const [id, setId] = useState("");
+    const [name, setName] = useState("");
+    const [desc, setDesc] = useState("");
+    const [image, setImage] = useState("");
     const [items, setItem] = useState(() => {
         const storedItems = JSON.parse(localStorage.getItem("items"));
         return storedItems || [];
     });
 
-    const [name, setName] = useState("");
-    const [desc, setDesc] = useState("");
-
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items))
     }, [items])
 
+    useEffect(() => {
+        fetch("https://learn.guidedao.xyz/api/student/products")
+            .then(response => response.json())
+            .then(data => setItem(data))
+    }, [])
+
+    if (!items) {
+        return null
+    }
     function handleFormSubmit(event) {
         event.preventDefault();
         const id = uuidv4();
@@ -52,7 +64,7 @@ export default function Shop(props) {
         <>
             <h3 className={classNames}>Choose your goods</h3>
             <div>
-                <AddItemForm name={name} desc={desc} onNameChange={(e) => setName(e.target.value)} onDescChange={(e) => setDesc(e.target.value)} onFormSubmit={handleFormSubmit} />
+                <AddItemForm items={items} name={name} desc={desc} onNameChange={(e) => setName(e.target.value)} onDescChange={(e) => setDesc(e.target.value)} onFormSubmit={handleFormSubmit} />
             </div>
             <div>
             </div>

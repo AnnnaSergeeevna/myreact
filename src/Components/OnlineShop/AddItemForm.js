@@ -23,14 +23,6 @@ export default function AddItemForm(props) {
                 </label>
                 <select type="text" id="name" placeholder="coffeeName" className="ui-textfield" value={props.name} onChange={props.onNameChange} required>
                     <option value="">Сhoose your goods</option>
-                    <option value="Espresso">Espresso</option>
-                    <option value="Cappuccino S">Cappuccino S</option>
-                    <option value="Cappuccino M">Cappuccino M</option>
-                    <option value="Cappuccino L">Cappuccino L</option>
-                    <option value="Latte S">Latte S</option>
-                    <option value="Latte M">Latte M</option>
-                    <option value="Latte L">Latte L</option>
-                    <option value="Flat white">Flat white</option>
                 </select>
             </p>
         </div>

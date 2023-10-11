@@ -42,7 +42,9 @@ export default function Item(props) {
                     -
                 </button>
                 <h3 className="item-total">{total ? total : ""}</h3>
-                <button className="item-button" onClick={handleAddClick}>
+                <button className="item-button"
+                    disabled={total === 0}
+                    onClick={handleAddClick}>
                     +
                 </button>
             </div>
