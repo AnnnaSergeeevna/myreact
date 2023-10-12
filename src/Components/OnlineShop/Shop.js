@@ -30,7 +30,10 @@ export default function Shop(props) {
     useEffect(() => {
         fetch("https://learn.guidedao.xyz/api/student/products")
             .then(response => response.json())
-            .then(data => setItem(data))
+            .then(data => {
+                setItem(data)
+                console.log(data)
+            })
     }, [])
 
     if (!items) {

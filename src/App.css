@@ -6,7 +6,7 @@
 
 .App-wrapper {
   display: grid;
-  grid-template-columns: 2fr 18fr;
+  grid-template-columns: 5fr 18fr;
   grid-template-areas:
     "head head"
     "nav prof"

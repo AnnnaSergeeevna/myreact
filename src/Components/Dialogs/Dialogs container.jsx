@@ -10,7 +10,7 @@ import { withAuthRedirect } from '../../HOC/withAuth'
 let mapStateToProps = (state) => {
     return {
         dialogsPage: state.dialogsPage,
-        isAuth: state.auth.isAuth 
+        // isAuth: state.auth.isAuth 
     }
 }
 let mapDispatchToProps = (dispatch) => {
@@ -21,6 +21,6 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 export default compose(
-    withAuthRedirect,
+    // withAuthRedirect,
     connect(mapStateToProps, mapDispatchToProps),
-) (Dialogs) 
+)(Dialogs) 

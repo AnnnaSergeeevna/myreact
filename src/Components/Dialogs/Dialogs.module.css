@@ -9,13 +9,15 @@
   color: rgb(142, 9, 9);
   text-align: center;
 }
+
 .dialogsColumns img {
   width: 70px;
-border-radius: 35px;
+  border-radius: 35px;
 
 }
+
 .dialogs {
-  background: linear-gradient(rgb(252, 252, 252), rgb(120, 2, 2)); 
+  border-color: rgb(120, 2, 2);
 }
 
 .messages {
@@ -25,8 +27,9 @@ border-radius: 35px;
 .dialogs .active {
   color: rgb(142, 9, 9);
   font-size: large;
-  }
-  /* a:link {
+}
+
+/* a:link {
     color:rgb(142, 9, 9);
     text-decoration: none;
   }
