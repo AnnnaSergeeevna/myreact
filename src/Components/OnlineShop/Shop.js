@@ -6,73 +6,81 @@ import ItemList from "./ItemList";
 import Mapbx from "./Mapbx";
 import { v4 as uuidv4 } from "uuid";
 import classes from '../../App.css';
+import Item from "./Item";
+import Preloader from "../../Components/Common/Preloader"
+
 
 export default function Shop(props) {
-    const [theme, setTheme] = useState({
-        uititle: true,
-        disabled: false
+    const [items, setItem] = useState(() => {
+        const value = localStorage.getItem("items")
+        return JSON.parse(localStorage.getItem("items")) || [];
     });
-    const classNames = theme.uititle ? "uititle" : "disabled";
-
     const [id, setId] = useState("");
     const [name, setName] = useState("");
     const [desc, setDesc] = useState("");
     const [image, setImage] = useState("");
-    const [items, setItem] = useState(() => {
-        const storedItems = JSON.parse(localStorage.getItem("items"));
-        return storedItems || [];
-    });
-
+    const [loader, setLoader] = useState(false)
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items))
     }, [items])
-
     useEffect(() => {
+        if (items.length === 0) {
+            document.title = "Shopping cart is empty";
+            console.log(items.length)
+        } else {
+            document.title = `${items.length} goods`;
+            console.log(items.length)
+        }
+    }, [items]);
+    useEffect(() => {
+        setLoader(true)
         fetch("https://learn.guidedao.xyz/api/student/products")
-            .then(response => response.json())
-            .then(data => {
-                setItem(data)
-                console.log(data)
+            .then((response) => response.json())
+            .then((data) => {
+                setItem(data);
             })
-    }, [])
 
-    if (!items) {
-        return null
-    }
+            .catch(error => {
+                console.error(error)
+            })
+    }, []);
+
     function handleFormSubmit(event) {
-        event.preventDefault();
         const id = uuidv4();
         const newItem = {
             id: id,
             name: name,
-            desc: desc
+            desc: desc,
+            image: image
         };
-
-        if (items.length === 0) {
-            setTheme({ ...theme, uititle: false });
-        }
         setItem([...items, newItem]);
+        console.log("Set")
         setName("");
         setDesc("");
+        setImage("");
     }
 
     function removeItem() {
         setItem(items.slice(1));
-        if (items.length === 1) {
-            setTheme({ ...theme, uititle: true });
-        }
     }
 
     return (
         <>
-            <h3 className={classNames}>Choose your goods</h3>
+            <h3>Choose your goods</h3>
             <div>
-                <AddItemForm items={items} name={name} desc={desc} onNameChange={(e) => setName(e.target.value)} onDescChange={(e) => setDesc(e.target.value)} onFormSubmit={handleFormSubmit} />
+                <AddItemForm
+                    items={items}
+                    id={id}
+                    name={name}
+                    desc={desc}
+                    image={image}
+                    onNameChange={(event) => setName(event.target.value)}
+                    onDescChange={(event) => setDesc(event.target.value)}
+                    onFormSubmit={handleFormSubmit}
+                />
             </div>
             <div>
-            </div>
-            <div>
-                <ItemList items={items} removeItem={removeItem} />
+                <ItemList items={items} id={id} name={name} desc={desc} image={image} removeItem={removeItem} />
             </div>
             <div>
                 <Mapbx />

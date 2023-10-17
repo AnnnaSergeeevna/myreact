@@ -37,7 +37,9 @@
 }
 
 h3 {
-  font-size: xx-large;
+  display: flex;
+  align-content: flex-end;
+  font-size: x-large;
 }
 
 .ui-link {
@@ -119,8 +121,8 @@ h3 {
 
 .item-quantity {
   display: flex;
-  align-items: center;
-  margin-bottom: 0px;
+  align-items: baseline;
+  margin-top: -7cqmin;
 }
 
 .item-button {
@@ -136,6 +138,7 @@ h3 {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 0px;
 }
 
 .item-button:active {
@@ -159,6 +162,12 @@ h3 {
 h4 {
   margin-left: 10px;
   margin-top: 20px;
+}
+
+h5 {
+  margin-left: 10px;
+  margin-top: 20px;
+  border-top-style: dashed;
 }
 
 #map {
