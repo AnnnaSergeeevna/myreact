@@ -22,21 +22,23 @@ const Payment = () => (
       <Form>
         <fieldset>
           <legend>Title</legend>
-          <ul classes={classes.body}>
-            <li>
-              <label for='title_1'>
-                <input type='radio' id='title_1' name="title" value="M."></input>
-                Mr
-              </label>
-            </li>
-            <li>
-              <label for="title_2">
-                <input type="radio" id="title_2" name="title" value="Ms."></input>
-                Ms
-              </label>
-            </li>
+          <ul className="radio-button">
+            <label for='title_1'>
+              <input type='radio' id='title_1' name="title" value="M."></input>
+              Mr
+            </label>
+            <div>
+              <p> </p>
+            </div>
+            <label for="title_2">
+              <input type="radio" id="title_2" name="title" value="Ms."></input>
+              Mrs
+            </label>
           </ul>
         </fieldset>
+        <div>
+          <p> </p>
+        </div>
         <div>
           <label htmlFor="name">Name: *</label>
           <Field id="name" name="username" placeholder="Anna Kuzmina" required />

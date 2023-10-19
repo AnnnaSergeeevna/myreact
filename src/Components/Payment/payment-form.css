@@ -1,4 +1,5 @@
-body {
+/* body {
+  width: 1440px;
   font-size: large;
   list-style-type: circle;
   padding-left: 10;
@@ -8,11 +9,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 ul {
   list-style-type: none;
+}
 
+.radio-button {
+  display: flex;
+  width: 400px;
+  justify-content: flex-start;
+  grid-gap: 20px;
+  padding-inline-start: 0px;
 }
 
 input:invalid {

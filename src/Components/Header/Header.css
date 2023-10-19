@@ -1,16 +1,18 @@
-
 .head {
-grid-area: head;
-height: 90px;
-background-color: rgb(233, 233, 233);
+  grid-area: head;
+  width: 100%;
+  max-width: 1400px;
+  height: 90px;
+  background-color: rgb(233, 233, 233);
 
-color: rgb(142, 9, 9);
+  color: rgb(142, 9, 9);
 
-font-family: serif;
-font-size: xx-large;
-font-weight: bolder;
+  font-family: serif;
+  font-size: xx-large;
+  font-weight: bolder;
 
 }
+
 .head img {
   width: 80px;
 }
