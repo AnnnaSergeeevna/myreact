@@ -33,7 +33,7 @@ export default function AddItemForm(props) {
                         onChange={onNameChange}
                         required>
                         <option value="">Select an item</option>
-                        {items.flat(3).map((item) => (
+                        {items.flat(2).map((item) => (
                             <option key={item.id} value={item.name}>
                                 {item.name}
                             </option>

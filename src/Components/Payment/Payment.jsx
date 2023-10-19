@@ -37,16 +37,17 @@ const Payment = () => (
             </li>
           </ul>
         </fieldset>
-        <label htmlFor="name">Name: *</label>
-        <Field id="name" name="username" placeholder="Anna Kuzmina" required />
+        <div>
+          <label htmlFor="name">Name: *</label>
+          <Field id="name" name="username" placeholder="Anna Kuzmina" required />
 
-        <label htmlFor="email">E-mail: *</label>
-        <Field id="mail" name="usermail" placeholder="anna@askme.com" type='email' required />
+          <label htmlFor="email">E-mail: *</label>
+          <Field id="mail" name="usermail" placeholder="anna@askme.com" type='email' required />
 
-        <label htmlFor="pwd">Password: *</label>
-        <Field
-          id="pwd" name="password" type="password" required />
-
+          <label htmlFor="pwd">Password: *</label>
+          <Field
+            id="pwd" name="password" type="password" required />
+        </div>
         <section>
           <h2>Payment information</h2>
           <p>

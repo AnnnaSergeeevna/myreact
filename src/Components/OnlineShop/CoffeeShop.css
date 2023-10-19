@@ -178,9 +178,29 @@ h5 {
 }
 
 .map-overlay {
-
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0 0px;
   align-items: center;
   justify-content: space-between;
+}
+
+fieldset {
+  border: 1px solid #339dc7;
+  display: inline-block;
+}
+
+legend {
+  display: block;
+}
+
+.items-desc {
+  display: inline-block;
+  width: 400px;
+  font-size: medium;
+}
+
+.items-image {
+  display: flex;
+  width: 400px;
+  margin-bottom: 25px;
 }

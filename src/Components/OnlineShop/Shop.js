@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from "react";
 import AddItemForm from "./AddItemForm";
 import ItemList from "./ItemList";
@@ -8,65 +9,65 @@ import classes from '../../App.css';
 import Item from "./Item";
 import Preloader from "../../Components/Common/Preloader"
 
-
 export default function Shop(props) {
-    const [items, setItem] = useState(() => {
-        const value = localStorage.getItem("items")
-        return JSON.parse(localStorage.getItem("items")) || [];
-    });
     const [id, setId] = useState("");
     const [name, setName] = useState("");
     const [desc, setDesc] = useState("");
     const [image, setImage] = useState("");
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(false);
+    const [items, setItems] = useState(() => {
+        const storedItems = JSON.parse(localStorage.getItem("items"));
+        return storedItems || [];
+    }
+    );
     useEffect(() => {
-        localStorage.setItem("items", JSON.stringify(items))
-    }, [items])
-    useEffect(() => {
-        if (items.length === 0) {
-            document.title = "Shopping cart is empty";
-            console.log(items.length)
-        } else {
-            document.title = `${items.length} goods`;
-            console.log(items.length)
-        }
-    }, [items]);
-    useEffect(() => {
-        setLoader(true)
+        setLoader(true);
         fetch("https://learn.guidedao.xyz/api/student/products")
             .then((response) => response.json())
             .then((data) => {
-                setItem(data);
+                setItems(data);
             })
-
             .catch(error => {
-                console.error(error)
+                console.error(error);
             })
+            .finally(() => setLoader(false));
     }, []);
 
-    function handleFormSubmit(event) {
-        const id = uuidv4();
-        const newItem = {
-            id: id,
-            name: name,
-            desc: desc,
-            image: image
-        };
-        setItem([...items, newItem]);
-        console.log("Set")
-        setName("");
-        setDesc("");
-        setImage("");
-    }
 
-    function removeItem() {
-        setItem(items.slice(1));
-    }
+    // useEffect(() => {
+    //     if (items.length === 0) {
+    //         document.title = "Shopping cart is empty";
+    //     } else {
+    //         document.title = `${items.length} goods`;
+    //     }
+    // }, [items]);
+
+    useEffect(() => {
+        localStorage.setItem("items", JSON.stringify(items))
+    }, [items]);
+
+    // function handleFormSubmit(event) {
+    //     const id = uuidv4();
+    //     const newItem = {
+    //         id: id,
+    //         name: name,
+    //         desc: desc,
+    //         image: image
+    //     };
+    //     setItems([...items, newItem]);
+    //     setName("");
+    //     setDesc("");
+    //     setImage("");
+    // }
+
+    // function removeItem(id) {
+    //     setItems(items.slice(1));
+    // }
 
     return (
         <>
             <h3>Choose your goods</h3>
-            <div>
+            {/* <div>
                 <AddItemForm
                     items={items}
                     id={id}
@@ -77,9 +78,15 @@ export default function Shop(props) {
                     onDescChange={(event) => setDesc(event.target.value)}
                     onFormSubmit={handleFormSubmit}
                 />
-            </div>
+            </div> */}
             <div>
-                <ItemList items={items} id={id} name={name} desc={desc} image={image} removeItem={removeItem} />
+                {items.length > 0 ? (
+                    <ItemList items={items} id={id} name={name} desc={desc} image={image}
+                    //  removeItem={removeItem} 
+                    />
+                ) : (
+                    <p></p>
+                )}
             </div>
             <div>
                 <Mapbx />
@@ -87,5 +94,3 @@ export default function Shop(props) {
         </>
     );
 }
-
-
