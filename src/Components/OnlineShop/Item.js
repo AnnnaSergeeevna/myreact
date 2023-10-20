@@ -19,10 +19,11 @@ export default function Item(props) {
         //     setTotal(total - 1)
         // setFree(free - 1)
         // } else {
-        setTotal(total - 1)
+        if (total > 0) {
+            setTotal(total - 1);
+        }
         // }
     }
-
     if (!info) {
         return null;
     }
@@ -55,9 +56,9 @@ export default function Item(props) {
                 <h3>Free: {free}</h3>
 
             </div> */}
-            {/* <button className="item-button" onClick={removeItem} >
-                Delete
-            </button> */}
+            <button className="item-button" onClick={removeItem} >
+                Add to cart
+            </button>
         </div >
     );
 }

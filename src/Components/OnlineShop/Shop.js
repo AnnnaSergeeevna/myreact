@@ -20,6 +20,17 @@ export default function Shop(props) {
         return storedItems || [];
     }
     );
+
+
+    // useEffect(() => {
+    //     if (items.length === 0) {
+    //         document.title = "Shopping cart is empty";
+    //     } else {
+    //         document.title = `${items.length} goods`;
+    //     }
+    // }, [items]);
+
+
     useEffect(() => {
         setLoader(true);
         fetch("https://learn.guidedao.xyz/api/student/products")
@@ -31,42 +42,34 @@ export default function Shop(props) {
                 console.error(error);
             })
             .finally(() => setLoader(false));
-    }, []);
-
-
-    // useEffect(() => {
-    //     if (items.length === 0) {
-    //         document.title = "Shopping cart is empty";
-    //     } else {
-    //         document.title = `${items.length} goods`;
-    //     }
-    // }, [items]);
+    }, [])
 
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items))
     }, [items]);
 
-    // function handleFormSubmit(event) {
-    //     const id = uuidv4();
-    //     const newItem = {
-    //         id: id,
-    //         name: name,
-    //         desc: desc,
-    //         image: image
-    //     };
-    //     setItems([...items, newItem]);
-    //     setName("");
-    //     setDesc("");
-    //     setImage("");
-    // }
+    function handleFormSubmit(event) {
+        const id = uuidv4();
+        const newItem = {
+            id: 'id',
+            name: name,
+            desc: desc,
+            image: image
+        };
+        setItems([...items, newItem]);
+        setName("");
+        setDesc("");
+        setImage("");
+        setId("")
+    }
 
-    // function removeItem(id) {
-    //     setItems(items.slice(1));
-    // }
+    function removeItem(id) {
+        setItems(items.slice(1));
+    }
 
     return (
         <>
-            <h3>Choose your goods</h3>
+            <h3>These goods fetch from server</h3>
             {/* <div>
                 <AddItemForm
                     items={items}
@@ -82,7 +85,7 @@ export default function Shop(props) {
             <div>
                 {items.length > 0 ? (
                     <ItemList items={items} id={id} name={name} desc={desc} image={image}
-                    //  removeItem={removeItem} 
+                        removeItem={removeItem}
                     />
                 ) : (
                     <p></p>

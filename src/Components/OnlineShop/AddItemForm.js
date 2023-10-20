@@ -19,6 +19,7 @@ export default function AddItemForm(props) {
     //     };
     // }, [props.onNameChange]);
     const { items, name, onNameChange, onDescChange, onFormSubmit } = props;
+
     return (
         <form onSubmit={onFormSubmit}>
             <div>
@@ -33,7 +34,7 @@ export default function AddItemForm(props) {
                         onChange={onNameChange}
                         required>
                         <option value="">Select an item</option>
-                        {items.flat(2).map((item) => (
+                        {items.flat(3).map((item) => (
                             <option key={item.id} value={item.name}>
                                 {item.name}
                             </option>
@@ -46,7 +47,7 @@ export default function AddItemForm(props) {
                 <input type="submit" className="ui-button" value="Add" onClick={(e) => {
                     e.preventDefault();
                     onFormSubmit()
-                    console.log("отправка")
+                    console.log(items.length);
                 }} />
             </div>
         </form>
