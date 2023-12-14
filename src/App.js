@@ -12,7 +12,6 @@ import UsersContainer from './Components/Users/Users container';
 import ProfileContainer from './Components/Profile/Profile Container';
 import HeaderContainer from './Components/Header/Header container';
 import Login from './Components/Login/Login';
-// import CanvasContainer from './Components/Canvas/Canvas Container';
 import Payment from './Components/Payment/Payment';
 
 
@@ -27,7 +26,6 @@ const App = (props) => {
           <Route path='/dialogs' element={<DialogsContainer store={props.store} />}></Route>
           <Route path='/users' element={<UsersContainer store={props.store} />}></Route>
           <Route path='/payment' element={<Payment />}></Route>
-          {/* <Route path='/canvas' element={<CanvasContainer />}></Route> */}
           <Route path='/news' element={<News />}></Route>
           <Route path='/online-shop' element={<OnlineShop />}></Route>
           <Route path='/settings' element={<Settings />}></Route>

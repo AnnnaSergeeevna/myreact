@@ -1,3 +1,17 @@
+:root {
+
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: rgb(26, 147, 52);
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+}
+
 .cards {
   display: inline;
   color: rgb(142, 9, 9);
@@ -40,4 +54,82 @@ button {
   border-color: rgb(163, 142, 86);
   margin-bottom: 10px;
   cursor: pointer;
+}
+
+.ui-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.deleteButton.color-0 {
+  width: 70px;
+  height: 30px;
+  line-height: normal;
+  border-radius: 20px;
+  background-color: var(--bs-red);
+  font-size: medium;
+  color: black;
+  border-color: black;
+  transition: 0.3s;
+}
+
+.deleteButton.color-1 {
+  width: 70px;
+  height: 30px;
+  line-height: normal;
+  border-radius: 20px;
+  background-color: var(--bs-orange);
+  border-color: black;
+  font-size: medium;
+  color: black;
+  transition: 0.3s;
+}
+
+.deleteButton.color-2 {
+  width: 70px;
+  height: 30px;
+  line-height: normal;
+  border-radius: 20px;
+  background-color: var(--bs-yellow);
+  border-color: black;
+  font-size: medium;
+  color: black;
+  transition: 0.3s;
+}
+
+.deleteButton.color-3 {
+  width: 70px;
+  height: 30px;
+  line-height: normal;
+  border-radius: 20px;
+  background-color: var(--bs-green);
+  border-color: black;
+  font-size: medium;
+  color: black;
+  transition: 0.3s;
+}
+
+.deleteButton.color-4 {
+  width: 70px;
+  height: 30px;
+  line-height: normal;
+  border-radius: 20px;
+  background-color: var(--bs-blue);
+  border-color: black;
+  font-size: medium;
+  color: black;
+  transition: 0.3s;
+}
+
+.deleteButton.color-5 {
+  width: 70px;
+  height: 30px;
+  line-height: normal;
+  border-radius: 20px;
+  background-color: var(--bs-pink);
+  border-color: black;
+  font-size: medium;
+  color: black;
+  transition: 0.3s;
 }
