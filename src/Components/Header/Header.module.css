@@ -7,10 +7,17 @@
   height: 90px;
   /* background-color: rgb(233, 233, 233); */
   color: rgb(142, 9, 9);
+  border-bottom: 1px ridge rgb(191, 113, 113);
+
   font-family: serif;
   font-size: xx-large;
   font-weight: bolder;
 
+}
+
+.dark {
+  background-color: var(--bs-orange);
+  color: white;
 }
 
 .head img {

@@ -11,7 +11,7 @@ const Navbar = (props) => {
         <div className={classes.item}><NavLink to="/online-shop" className={navData => navData.isActive ? classes.active : classes.item}>Online-shop</NavLink></div>
         <div className={classes.item}><NavLink to="/payment" className={navData => navData.isActive ? classes.active : classes.item}>Payment</NavLink></div>
         {/* <div className={classes.item}><NavLink to="/canvas" className={navData => navData.isActive ? classes.active : classes.item}>Canvas</NavLink></div> */}
-        <div className={classes.item}><NavLink to="/settings" className={navData => navData.isActive ? classes.active : classes.item}>Settings</NavLink></div>
+        <div className={classes.item}><NavLink to="/foodplan" className={navData => navData.isActive ? classes.active : classes.item}>Food Plan</NavLink></div>
     </nav>;
 }
 

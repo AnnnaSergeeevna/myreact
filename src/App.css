@@ -4,8 +4,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+input:valid {
+  display: flex;
+  width: 400px;
+  height: 20px;
+  cursor: pointer;
+}
 
-
+.light {
+  background-color: white;
+  color: rgb(142, 9, 9);
+}
 
 .App-wrapper {
   display: grid;
@@ -17,16 +26,67 @@
     "nav prof"
     "foot foot";
   font-family: serif;
-
 }
 
 .App-wrapper-content {
   grid-area: prof;
   background-color: white;
-  border-top: 2px ridge rgb(191, 113, 113);
-
   color: rgb(142, 9, 9);
   font-size: x-large;
   text-align: left;
   padding-left: 10px;
+}
+
+.foodPlanLink {
+  font-size: xx-large;
+}
+
+.foodPlanLink:hover {
+  color: rgb(130, 137, 0);
+  font-style: bold;
+}
+
+.foodPlanLink:active {
+  color: #afce00;
+}
+
+.gridCont {
+  display: flex;
+  justify-content: center;
+}
+
+.gridImage {
+  width: 80%;
+  margin: 10px 10px 10px 10px;
+  transition: transform 0.3s;
+}
+
+.gridCont .gridImage.zoomed {
+  border: 2px solid rgb(142, 9, 9);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.controls {
+  position: fixed;
+  top: 50%;
+  display: flex;
+  justify-content: space-around;
+  width: 140%;
+  margin-top: 5%;
+  z-index: 1000;
+}
+
+.controlButton {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #8e0909;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }

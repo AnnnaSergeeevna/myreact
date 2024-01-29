@@ -12,6 +12,7 @@
   --bs-pink: #d63384;
 }
 
+
 .cards {
   display: inline;
   color: rgb(142, 9, 9);
@@ -132,4 +133,13 @@ button {
   font-size: medium;
   color: black;
   transition: 0.3s;
+}
+
+.colorBlock {}
+
+input:valid {
+  display: flex;
+  width: 400px;
+  height: 20px;
+  cursor: pointer;
 }
