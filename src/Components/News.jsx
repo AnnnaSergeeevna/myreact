@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react"
 import classes from './News.css';
 import Cards from "./Cards";
 import RNBW from "./RNBW";
-import Slider from './Slider';
+import { NavLink } from 'react-router-dom';
+
 
 
 function News({ onChange, sliderValue }) {
@@ -37,7 +38,9 @@ function News({ onChange, sliderValue }) {
                 <h2>News</h2>
                 <p>2 Oct 2023, 17:35:47. I added animated Cards, they appear randomly from the API <Cards /></p>
                 <p>12 Nov 2023, 15:07:12. You may create rainbow buttons <RNBW /></p>
-                <p>14 Dec 2023, 12:26:00. Make the background a comfortable tone with Slider <Slider onChange={handleSliderChange} sliderValue={sliderValue} /></p>
+                <p>30 Jan 2024, 11:46:00. My current project is here<button className='buttonFP'><NavLink to="/foodplan" className={navData => navData.isActive ? classes.active : classes.item}>Food Plan</NavLink></button>
+                </p>
+                {/* <p>14 Dec 2023, 12:26:00. Make the background a comfortable tone with Slider <Slider onChange={handleSliderChange} sliderValue={sliderValue} /></p> */}
                 <div className="time">{date.toLocaleTimeString()}</div>
             </div>
         </>
