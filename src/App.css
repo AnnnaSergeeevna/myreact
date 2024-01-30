@@ -37,8 +37,17 @@ input:valid {
   padding-left: 10px;
 }
 
-.foodPlanLink {
+h2 {
+  display: flex;
   font-size: xx-large;
+  justify-content: center;
+}
+
+.foodPlanLink {
+  display: flex;
+  font-size: xx-large;
+  background-color: #8e0909;
+  justify-content: center;
 }
 
 .foodPlanLink:hover {
@@ -53,12 +62,17 @@ input:valid {
 .gridCont {
   display: flex;
   justify-content: center;
+  cursor: pointer;
+
 }
 
 .gridImage {
   width: 80%;
   margin: 10px 10px 10px 10px;
   transition: transform 0.3s;
+  border: 2px solid rgb(142, 9, 9);
+
+  cursor: pointer;
 }
 
 .gridCont .gridImage.zoomed {

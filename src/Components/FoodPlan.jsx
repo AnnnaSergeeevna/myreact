@@ -42,10 +42,11 @@ const FoodPlan = () => {
 
     return (
         <>
-            <h2>This is my last project</h2>
+            <h2>⬇ This is a link to my current project ⬇</h2>
             <a className='foodPlanLink' href="https://65b6bea4213eeea16b80d924--phenomenal-liger-ccb02d.netlify.app/" target="_blank">Food Plan</a>
             <p>It has a lot of tables, forms, required fields, requests to the server.</p>
-            <p>There is animation of pressing buttons, colors of buttons depending on ID, popups.</p>
+            <p>There is animation of pressing buttons, colors of buttons depending on ID, modal windows.</p>
+            <h3>Push on pic, this is a screenshots of working backend:</h3>
 
             {zoomedIndex !== null ? (
                 <>
@@ -69,6 +70,7 @@ const FoodPlan = () => {
                             <img
                                 src={image}
                                 alt={`Image ${index + 1}`}
+                                title={`Image ${index + 1}`}
                                 className={`gridImage`}
                                 onClick={() => handleImageClick(index)}
                             />

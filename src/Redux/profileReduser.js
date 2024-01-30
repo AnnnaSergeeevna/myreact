@@ -6,8 +6,12 @@ const SET_STATUS = 'SET_STATUS'
 
 let initialState = {
     posts: [
-        { id: 1, message: 'This is my first React App ⚛️', likesCount: 2 },
-        { id: 2, message: 'Ohhh i so proud myself!', likesCount: 4 }],
+        { id: 1, message: <>Hi! My name is Anna! Looking for a job ⚛️ <br /> Residing in Málaga. Valid work permit. Higher education.</>, likesCount: 2 },
+        {
+            id: 2, message: <>Skills: HTML  JavaScript  Cascading Style Sheets (CSS)  Tailwind CSS  <br />React.js  Redux.js  Microsoft Visual Studio Code  Git  GitHub  Node.js<br />Axios, Formik, AgGrid, React Router, Yup, Mapbox GL, Microsoft Visual Studio Code, Git, GitHub, Node.js, CRA, Webpack, Figma, Trello, Swagger
+                <br />Responsive Web Design; Web Accessibility; Cross-browser Compatibility; Shadcn, ChatGPT<br />
+                Deploy: Vercel, Netlify</>, likesCount: 4
+        }],
     profile: null,
     status: ''
 }

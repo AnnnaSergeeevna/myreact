@@ -135,7 +135,42 @@ button {
   transition: 0.3s;
 }
 
-.colorBlock {}
+.buttonFP {
+  display: block;
+  margin-top: 30px;
+  font-size: large;
+  border-radius: 15px;
+  color: rgb(108, 81, 1);
+  border-color: rgb(163, 142, 86);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* 
+
+a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FFF;
+}
+
+a:hover {
+  color: rgb(232, 189, 88);
+  text-decoration-line: none;
+}
+
+a:active {
+  color: #edd19b;
+} */
+
+.buttonFP a.active {
+  color: rgb(108, 81, 1);
+  font-size: xx-large;
+  background-color: rgb(138, 36, 36);
+}
 
 input:valid {
   display: flex;

@@ -23,17 +23,17 @@ const App = (props) => {
     setSliderValue(value);
   };
 
-  const blockStyles = {
-    backgroundColor: `rgb(${(200 - sliderValue) * 1.26}, ${(200 - sliderValue) * 1.06}, ${(200 - sliderValue) * 0.86})`,
+  // const blockStyles = {
+  //   backgroundColor: `rgb(${(200 - sliderValue) * 1.26}, ${(200 - sliderValue) * 1.06}, ${(200 - sliderValue) * 0.86})`,
 
-  };
+  // };
 
   return (
     <div className='App'>
       <div className='App-wrapper'>
         <HeaderContainer store={props.store} />
         <Navbar />
-        <div className='App-wrapper-content' style={blockStyles}>
+        <div className='App-wrapper-content'>
           <Routes>
             <Route path='/profile/:userId?' element={<ProfileContainer store={props.store} />}></Route>
             <Route path='/dialogs' element={<DialogsContainer store={props.store} />}></Route>
