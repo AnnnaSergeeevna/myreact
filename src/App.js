@@ -1,6 +1,4 @@
-import React, { useState } from "react"
 
-import logo from './logo.svg';
 import classes from './App.css';
 import Navbar from '../src/Components/Navbar/Navbar.jsx';
 import Footer from '../src/Components/Footer/Footer.jsx';
@@ -14,20 +12,15 @@ import ProfileContainer from './Components/Profile/Profile Container';
 import HeaderContainer from './Components/Header/Header container';
 import Login from './Components/Login/Login';
 import Payment from './Components/Payment/Payment';
+import CanvasContainer from "../src/Components/Canvas/CanvasContainer";
 
 
 const App = (props) => {
-  const [sliderValue, setSliderValue] = useState(0);
+  // const [sliderValue, setSliderValue] = useState(0);
 
-  const handleSliderChange = (value) => {
-    setSliderValue(value);
-  };
-
-  // const blockStyles = {
-  //   backgroundColor: `rgb(${(200 - sliderValue) * 1.26}, ${(200 - sliderValue) * 1.06}, ${(200 - sliderValue) * 0.86})`,
-
+  // const handleSliderChange = (value) => {
+  //   setSliderValue(value);
   // };
-
   return (
     <div className='App'>
       <div className='App-wrapper'>
@@ -39,8 +32,9 @@ const App = (props) => {
             <Route path='/dialogs' element={<DialogsContainer store={props.store} />}></Route>
             <Route path='/users' element={<UsersContainer store={props.store} />}></Route>
             <Route path='/payment' element={<Payment />}></Route>
-            <Route path='/news' element={<News onChange={handleSliderChange} sliderValue={sliderValue} />}></Route>
+            <Route path='/news' element={<News />}></Route>
             <Route path='/online-shop' element={<OnlineShop />}></Route>
+            <Route path='/tictactoe' element={<CanvasContainer />}></Route>
             <Route path='/foodplan' element={<FoodPlan />}></Route>
             <Route path='/login' element={<Login />}></Route>
           </Routes>
