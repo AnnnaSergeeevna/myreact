@@ -140,13 +140,13 @@ button {
   margin-top: 30px;
   font-size: large;
   border-radius: 15px;
-  color: rgb(108, 81, 1);
+  color: black;
   border-color: rgb(163, 142, 86);
   margin-bottom: 10px;
   cursor: pointer;
 }
 
-/* 
+
 
 a:link {
   color: #FFF;
@@ -164,7 +164,7 @@ a:hover {
 
 a:active {
   color: #edd19b;
-} */
+}
 
 .buttonFP a.active {
   color: rgb(108, 81, 1);
@@ -172,9 +172,14 @@ a:active {
   background-color: rgb(138, 36, 36);
 }
 
+.buttonFP a.visited {
+  color: #000000;
+  text-decoration: none;
+}
+
 input:valid {
   display: flex;
   width: 400px;
   height: 20px;
-  cursor: pointer;
+  cursor: text;
 }
