@@ -1,51 +1,151 @@
-
-.prof {
-
+.head {
+  animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards;
 }
+
 .description {
-padding-left: 15px;
+  padding-left: 15px;
 
 }
+
 .description img {
-    height: 250px;
-  }
+  height: 250px;
+}
+
 .myposts {
-padding-left: 15px;
-vertical-align: top;
+  display: inline;
+
+  padding-left: 15px;
+  vertical-align: top;
 
 }
+
 .post {
-text-align: justify;
-vertical-align: top;
-padding-top: 20px;
+  display: flex;
+  text-align: justify;
+  vertical-align: top;
+  padding-top: 20px;
 
 }
+
 .posts {
+
   width: 600px;
 }
+
 .button {
-padding-bottom: 15px;
-cursor: pointer;
-padding-bottom: 20px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  padding-bottom: 20px;
 }
+
 .item {
-padding-left: 15px;
-align-items: center;
+  padding-left: 15px;
+  align-items: center;
 }
+
 .item img {
-width: 70px;
-border-radius: 35px;
+  padding: 15px;
+  width: 50px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  animation: scale-in-center 3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+
 }
+
 .span {
-padding-left: 15px;
+  padding-left: 15px;
 }
+
 .likecount {
-font-size: medium;
-vertical-align: text-bottom;
+  font-size: medium;
+  vertical-align: text-bottom;
 }
 
 .status {
   min-width: 200px;
   min-height: 25px;
   border: 1px solid rgb(255, 255, 255);
+}
+
+li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.usrPhoto {
+  animation: scale-in-center 3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.scale-in-center {
+  -webkit-animation: scale-in-center 3s cubic-bezier(.175, .885, .32, 1.275) both;
+  animation: scale-in-center 3s cubic-bezier(.175, .885, .32, 1.275) both
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+  }
+}
+
+.headTracking {
+  animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards
+}
+
+.tracking-in-contract {
+  -webkit-animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards;
+  animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards
+}
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1
+  }
 }

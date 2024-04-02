@@ -16,12 +16,14 @@ const MyPosts = (props) => {
     }
     return (
         <div>
-            <h2>My posts</h2>
+            <h2 className={styles.headTracking}>Hello! i'm Anna</h2>
 
             <div className={styles.posts}>
-                < MPFormik /></div>
-            <div> {postsElements}
+                <div> {postsElements}
+                </div>
+                {/* < MPFormik /> */}
             </div>
+
         </div>
 
     )

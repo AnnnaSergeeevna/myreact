@@ -6,11 +6,17 @@ const SET_STATUS = 'SET_STATUS'
 
 let initialState = {
     posts: [
-        { id: 1, message: <>Hi! My name is Anna! Looking for a job ⚛️ <br /> Residing in Málaga. Valid work permit. Higher education.</>, likesCount: 2 },
+        { id: 1, message: <><h3>Looking for a job </h3><li> Residing in Málaga.</li> <li> Valid work permit. </li>  <li> Higher education.</li></> },
         {
-            id: 2, message: <>Skills: HTML  JavaScript  Cascading Style Sheets (CSS)  Tailwind CSS  <br />React.js  Redux.js  Microsoft Visual Studio Code  Git  GitHub  Node.js<br />Axios, Formik, AgGrid, React Router, Yup, Mapbox GL, Microsoft Visual Studio Code, Git, GitHub, Node.js, CRA, Webpack, Figma, Trello, Swagger
-                <br />Responsive Web Design; Web Accessibility; Cross-browser Compatibility; Shadcn, ChatGPT<br />
-                Deploy: Vercel, Netlify</>, likesCount: 4
+            id: 2, message: <><h3>Skills:</h3> <ul></ul>
+                <ul>HTML  JavaScript  Cascading Style Sheets (CSS) </ul>
+                <ul>React.js, Redux.js</ul>
+                <ul>Axios, Formik, AgGrid, React Router, Yup, Mapbox GL, Figma, Trello, Swagger</ul>
+                <ul>Microsoft Visual Studio Code,  Git,  GitHub,  Node.js, CRA, Webpack</ul>
+                <ul>Responsive Web Design; Web Accessibility; Cross-browser Compatibility; </ul>
+                <ul>Shadcn, ChatGPT, Deploy: Vercel, Netlify</ul>
+
+            </>
         }],
     profile: null,
     status: ''
@@ -23,7 +29,7 @@ const profileReduser = (state = initialState, action) => {
             stateCopy.posts.push({
                 id: 3,
                 message: action.values,
-                likesCount: 0
+                // likesCount: 0
             })
             stateCopy.values = 'newPostText'
             return stateCopy

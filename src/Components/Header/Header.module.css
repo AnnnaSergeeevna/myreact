@@ -8,11 +8,47 @@
   /* background-color: rgb(233, 233, 233); */
   color: rgb(142, 9, 9);
   border-bottom: 1px ridge rgb(191, 113, 113);
-
   font-family: serif;
   font-size: xx-large;
   font-weight: bolder;
+  animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards;
+}
 
+.tracking-in-contract {
+  -webkit-animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards;
+  animation: tracking-in-contract 3s cubic-bezier(.215, .61, .355, 1.000) backwards
+}
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1
+  }
 }
 
 .dark {

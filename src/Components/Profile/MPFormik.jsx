@@ -11,20 +11,20 @@ const MPFormik = (props) => (
             initialValues={{
                 newPostText: '',
             }}
-            onSubmit={(values, {resetForm}) => {
-                 props.addPostActionCreator(values.newPostText)
+            onSubmit={(values, { resetForm }) => {
+                props.addPostActionCreator(values.newPostText)
                 console.log(values)
-                resetForm({values: ''})
+                resetForm({ values: '' })
             }
             }
         >
             <Form>
-                <div><Field type="textarea" id="newPostText" name="newPostText" case='input'/></div>
-                <div><button>Add Post</button></div>
+                <div><Field type="textarea" id="newPostText" name="newPostText" case='input' /></div>
+                <div><button>Write something</button></div>
             </Form>
         </Formik>
     </div>
 )
 ReactDOM.render(<MPFormik />, document.getElementById('root'));
 
-export default connect(null, {addPostActionCreator}) (MPFormik)
+export default connect(null, { addPostActionCreator })(MPFormik)
