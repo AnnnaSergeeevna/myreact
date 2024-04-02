@@ -5,6 +5,13 @@ import React, { useState, useEffect } from "react";
 import AddModWind from "./AddModWind";
 import "./TicTacToe.css";
 
+function Square({ value, onSquareClick }) {
+    return (
+        <button className="tile" onClick={onSquareClick}>
+            {value}
+        </button>
+    );
+}
 const TicTacToe = () => {
     const [count, setCount] = useState(0);
     const [cells, setCells] = useState(Array(16).fill(""));
@@ -18,7 +25,7 @@ const TicTacToe = () => {
         if (showModal) {
             const timeout = setTimeout(() => {
                 handleCloseModal();
-            }, 400000);
+            }, 4000);
             return () => clearTimeout(timeout);
         }
     }, [showModal]);
@@ -85,51 +92,37 @@ const TicTacToe = () => {
     return (
         <>
             <div>
-                {/* Рендеринг игры */}
                 <section id="players">
                     <div id="player1" className="player 1">
                         <button className="restart-btn" onClick={initializeGame}>Restart Game</button>
                     </div>
                 </section>
                 <section id="table-section">
-                    <div className="line horizontal line1"></div>
+                    {/* <div className="line horizontal line1"></div>
                     <div className="line horizontal line2"></div>
                     <div className="line horizontal line3"></div>
                     <div className="line vertical line4"></div>
                     <div className="line vertical line5"></div>
-                    <div className="line vertical line6"></div>
+                    <div className="line vertical line6"></div> */}
                     <div id="boxes" className="boxes">
-                        <div className="row">
-                            <div className="tile" onClick={() => tap(0)}>{cells[0]}</div>
-                            <div className="tile" onClick={() => tap(1)}>{cells[1]}</div>
-                            <div className="tile" onClick={() => tap(2)}>{cells[2]}</div>
-                            <div className="tile" onClick={() => tap(3)}>{cells[3]}</div>
-                        </div>
-                        <div className="row">
-                            <div className="tile" onClick={() => tap(4)}>{cells[4]}</div>
-                            <div className="tile" onClick={() => tap(5)}>{cells[5]}</div>
-                            <div className="tile" onClick={() => tap(6)}>{cells[6]}</div>
-                            <div className="tile" onClick={() => tap(7)}>{cells[7]}</div>
-                        </div>
-                        <div className="row">
-                            <div className="tile" onClick={() => tap(8)}>{cells[8]}</div>
-                            <div className="tile" onClick={() => tap(9)}>{cells[9]}</div>
-                            <div className="tile" onClick={() => tap(10)}>{cells[10]}</div>
-                            <div className="tile" onClick={() => tap(11)}>{cells[11]}</div>
-                        </div>
-                        <div className="row">
-                            <div className="tile" onClick={() => tap(12)}>{cells[12]}</div>
-                            <div className="tile" onClick={() => tap(13)}>{cells[13]}</div>
-                            <div className="tile" onClick={() => tap(14)}>{cells[14]}</div>
-                            <div className="tile" onClick={() => tap(15)}>{cells[15]}</div>
-                        </div>
+                        {[0, 1, 2, 3].map((row) => (
+                            <div key={row} className="row">
+                                {[0, 1, 2, 3].map((col) => (
+                                    <Square
+                                        key={row * 4 + col}
+                                        value={cells[row * 4 + col]}
+                                        onSquareClick={() => tap(row * 4 + col)}
+                                    />
+                                ))}
+                            </div>
+                        ))}
                     </div>
-                </section>
+                </section >
                 <section id="players">
                     <div id="player1" className="player 1">Player 1</div>
                     <div id="player2" className="player 2">Player 2</div>
                 </section>
-            </div>
+            </div >
             <AddModWind
                 showModal={showModal}
                 handleCloseModal={handleCloseModal}

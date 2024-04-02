@@ -28,7 +28,7 @@ const App = (props) => {
         <Navbar />
         <div className='App-wrapper-content'>
           <Routes>
-            <Route path='/profile/:userId?' element={<ProfileContainer store={props.store} />}></Route>
+            <Route path='/about/:userId?' element={<ProfileContainer store={props.store} />}></Route>
             <Route path='/dialogs' element={<DialogsContainer store={props.store} />}></Route>
             <Route path='/users' element={<UsersContainer store={props.store} />}></Route>
             <Route path='/payment' element={<Payment />}></Route>
