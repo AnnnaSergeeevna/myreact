@@ -1,9 +1,14 @@
 .foot {
   grid-area: foot;
-  background-color: rgb(149, 15, 15);
-  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100vh;
+  bottom: 0;
+  background-color: #ccc;
+  height: 30px;
+  background: linear-gradient(to right, rgb(142, 9, 9), white);
+  color: rgb(142, 9, 9);
   font-family: serif;
   text-align: right;
-  min-height: 100%;
-
 }

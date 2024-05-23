@@ -22,9 +22,10 @@ input:valid {
 
 .App-wrapper {
   display: grid;
-  max-width: 1200px;
-  width: 100%;
-  grid-template-columns: 5fr 18fr;
+  max-width: 1440px;
+  height: 100vh;
+  position: relative;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "head head"
     "nav prof"
@@ -32,14 +33,39 @@ input:valid {
   font-family: serif;
 }
 
+.head,
+.foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+
+
+.foot {
+  bottom: 0;
+  background-color: #ccc;
+}
+
 .App-wrapper-content {
   grid-area: prof;
+  overflow-y: scroll;
+
   background-color: white;
   color: rgb(142, 9, 9);
   font-size: x-large;
   text-align: left;
   padding-left: 10px;
 }
+
+nav {
+  grid-area: nav;
+  width: 200px;
+  height: 65vh;
+  overflow-y: auto;
+}
+
 
 h2 {
   display: flex;

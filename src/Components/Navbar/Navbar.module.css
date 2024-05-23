@@ -8,6 +8,16 @@
   font-size: x-large;
 }
 
+.item {
+  background-color: rgb(138, 36, 36);
+  color: rgb(255, 251, 251);
+  padding-top: 15px;
+  font-size: xx-large;
+  line-height: 1.5;
+  transition: transform 0.3s ease;
+  animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 .scale-in-ver-bottom {
   -webkit-animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -49,38 +59,35 @@
   }
 }
 
-
-.item {
-  background-color: rgb(138, 36, 36);
-  color: rgb(255, 251, 251);
-  padding-top: 15px;
-  font-size: xx-large;
-  line-height: 1.5;
-  animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-}
-
-
 a:link {
   color: #FFF;
   text-decoration: none;
+
 }
 
 a:visited {
   color: #FFF;
 }
 
-a:hover {
-  color: rgb(232, 189, 88);
-  text-decoration-line: none;
+
+.item:hover {
+  color: #FFF;
+  transform: translateY(5px);
 }
 
-a:active {
-  color: #edd19b;
+.item:active {
+  color: #FFF;
+  animation: flip-out-hor-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-.item a.active {
-  color: rgb(255, 255, 255);
-  font-size: xx-large;
-  background-color: rgb(138, 36, 36);
+@keyframes flip-out-hor-bottom {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
 }
