@@ -8,9 +8,9 @@ const Header = (props) => {
             {/* <img src='../headerLogo.png' />  */}
             My Portfolio
             <div>
-                <button className={classes.login}>{props.isAuth ? props.login
+                {/* <button className={classes.login}>{props.isAuth ? props.login
                     : <NavLink to={'/login'}>Login</NavLink>}
-                </button>
+                </button> */}
             </div>
         </div>
     )

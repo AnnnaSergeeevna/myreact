@@ -1,8 +1,12 @@
 .head {
   grid-area: head;
   width: 100%;
-  max-width: 1400px;
-  height: 90px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
   background-color: rgb(233, 233, 233);
   border-bottom: 1px ridge rgb(191, 113, 113);
 
@@ -11,9 +15,4 @@
   font-family: serif;
   font-size: xx-large;
   font-weight: bolder;
-
-}
-
-.head img {
-  width: 80px;
 }

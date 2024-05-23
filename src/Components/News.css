@@ -12,15 +12,12 @@
   --bs-pink: #d63384;
 }
 
-
-.cards {
-  display: inline;
+P .cards {
   color: rgb(142, 9, 9);
   font-size: large;
   text-align: left;
   padding-left: 10px;
   display: flex;
-  /* overflow: hidden; */
 }
 
 .time {

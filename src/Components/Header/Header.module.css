@@ -1,11 +1,12 @@
 .head {
   display: grid;
   grid-area: head;
-  grid-template-columns: 3fr 1fr;
-  max-width: 1440px;
+  grid-area: head;
   width: 100%;
-  height: 90px;
-  /* background-color: rgb(233, 233, 233); */
+  height: 50px;
+  left: 0;
+  right: 0;
+  top: 10px;
   color: rgb(142, 9, 9);
   border-bottom: 1px ridge rgb(191, 113, 113);
   font-family: serif;
@@ -56,17 +57,23 @@
   color: white;
 }
 
-.head img {
-  width: 80px;
-}
 
 .login {
-  float: right;
+  display: inline;
   font-size: x-large;
-  /* color: rgb(142, 9, 9); */
   border-radius: 10px;
   margin-top: 10px;
   margin-right: 10px;
-  /* border-color: rgb(145, 145, 144); */
+  cursor: pointer;
+}
+
+button {
+  display: inline;
+  margin-top: 30px;
+  font-size: large;
+  border-radius: 15px;
+  color: rgb(108, 81, 1);
+  border-color: rgb(163, 142, 86);
+  margin-bottom: 10px;
   cursor: pointer;
 }
