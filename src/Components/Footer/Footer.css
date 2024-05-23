@@ -1,9 +1,11 @@
 .foot {
   grid-area: foot;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   width: 100vh;
+  width: 100%;
+
   bottom: 0;
   background-color: #ccc;
   height: 30px;
