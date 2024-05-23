@@ -10,6 +10,7 @@ import DialogsContainer from './Components/Dialogs/Dialogs container';
 import UsersContainer from './Components/Users/Users container';
 import ProfileContainer from './Components/Profile/Profile Container';
 import HeaderContainer from './Components/Header/Header container';
+import Loader from './Components/Loader/Loader.js';
 import Login from './Components/Login/Login';
 import Payment from './Components/Payment/Payment';
 import CanvasContainer from "../src/Components/Canvas/CanvasContainer";
@@ -30,6 +31,7 @@ const App = (props) => {
           <Routes>
             <Route path='/about/:userId?' element={<ProfileContainer store={props.store} />}></Route>
             <Route path='/dialogs' element={<DialogsContainer store={props.store} />}></Route>
+            <Route path='/animation' element={<Loader />}></Route>
             <Route path='/users' element={<UsersContainer store={props.store} />}></Route>
             <Route path='/payment' element={<Payment />}></Route>
             <Route path='/news' element={<News />}></Route>

@@ -2,10 +2,9 @@
   grid-area: nav;
   background-color: rgb(138, 36, 36);
   color: rgb(255, 251, 251);
-  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: x-large;
+  font-size: large;
 }
 
 .item {
@@ -13,7 +12,7 @@
   color: rgb(255, 251, 251);
   padding-top: 15px;
   font-size: xx-large;
-  line-height: 1.5;
+  line-height: 1.35;
   transition: transform 0.3s ease;
   animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

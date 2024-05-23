@@ -14,7 +14,7 @@ const Navbar = (props) => {
     return <nav className={classes.nav}>
         <div className={`${classes.item} ${isActive ? classes.active : ''}`} onClick={handleClick}>
             <NavLink to="/about" className={navData => navData.isActive ? classes.active : classes.item}>About me</NavLink></div>
-        {/* <div className={classes.item}><NavLink to="/dialogs" className={navData => navData.isActive ? classes.active : classes.item}>Messages</NavLink></div> */}
+        <div className={classes.item}><NavLink to="/animation" className={navData => navData.isActive ? classes.active : classes.item}>Animation</NavLink></div>
         {/* <div className={classes.item}><NavLink to="/users" className={navData => navData.isActive ? classes.active : classes.item}>Users</NavLink></div> */}
         <div className={`${classes.item} ${isActive ? classes.active : ''}`} onClick={handleClick}>
             <NavLink to="/news" className={navData => navData.isActive ? classes.active : classes.item}>News</NavLink></div>
