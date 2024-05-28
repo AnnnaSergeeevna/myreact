@@ -1,3 +1,6 @@
+This is React app with examples my tasks.
+Check live demo: https://my-react-portfolio-anna-kuz.vercel.app/about
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
