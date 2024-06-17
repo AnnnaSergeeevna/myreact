@@ -10,11 +10,11 @@ let initialState = {
         {
             id: 2, message: <><h3>Skills:</h3> <ul></ul>
                 <ul>HTML  JavaScript  Cascading Style Sheets (CSS) </ul>
-                <ul>React.js, Redux.js</ul>
-                <ul>Axios, Formik, AgGrid, React Router, Yup, Mapbox GL, Figma, Trello, Swagger</ul>
+                <ul>React.js, Redux.js, PostgreSQL, Express</ul>
+                <ul>Bootstrap, Formik, AgGrid, React Router, Yup, Mapbox GL, Figma, Trello, Swagger</ul>
                 <ul>Microsoft Visual Studio Code,  Git,  GitHub,  Node.js, CRA, Webpack</ul>
                 <ul>Responsive Web Design; Web Accessibility; Cross-browser Compatibility; </ul>
-                <ul>Shadcn, ChatGPT, Deploy: Vercel, Netlify</ul>
+                <ul>Shadcn, ChatGPT, Deploy: Vercel, GitHub Pages</ul>
 
             </>
         }],
