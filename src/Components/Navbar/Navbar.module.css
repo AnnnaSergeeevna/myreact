@@ -1,6 +1,6 @@
 .nav {
   grid-area: nav;
-  background-color: rgb(138, 36, 36);
+  background-color: rgb(130, 230, 250);
   color: rgb(255, 251, 251);
   padding-left: 15px;
   padding-right: 15px;
@@ -8,7 +8,7 @@
 }
 
 .item {
-  background-color: rgb(138, 36, 36);
+  background-color: rgb(130, 230, 250);
   color: rgb(255, 251, 251);
   padding-top: 15px;
   font-size: xx-large;
@@ -70,12 +70,12 @@ a:visited {
 
 
 .item:hover {
-  color: #FFF;
+  color: rgb(140, 110, 90);
   transform: translateY(5px);
 }
 
 .item:active {
-  color: #FFF;
+  color: rgb(140, 110, 90);
   animation: flip-out-hor-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 

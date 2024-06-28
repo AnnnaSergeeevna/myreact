@@ -5,14 +5,19 @@ import { Formik, Field, Form } from 'formik';
 
 const Payment = () => (
   <div>
-    <h3>Payment form</h3>
-    <p>Required fields are followed by *<strong><abbr title='required'></abbr></strong>.</p>
+    <h3 className='h-form'>Payment form</h3>
+    <p className='p-form'>Required fields are followed by *<strong><abbr title='required'></abbr></strong>.</p>
     <h4>Contact information</h4>
+
     <Formik
       initialValues={{
         name: '',
         email: '',
         password: '',
+        usercard: 'visa',
+        cardnumber: '',
+        expiration: '',
+        title: '',
       }}
       onSubmit={async (values) => {
         await new Promise((r) => setTimeout(r, 500));
@@ -22,63 +27,50 @@ const Payment = () => (
       <Form>
         <fieldset>
           <legend>Title</legend>
-          <ul className="radio-button">
-            <label for='title_1'>
-              <input type='radio' id='title_1' name="title" value="M."></input>
-              Mr
-            </label>
-            <div>
-              <p> </p>
-            </div>
-            <label for="title_2">
-              <input type="radio" id="title_2" name="title" value="Ms."></input>
-              Mrs
-            </label>
-          </ul>
+          <div className="radio-button">
+            <label className="custom-control-label" htmlFor="customRadioInline1">Mr</label>
+            <Field type="radio" id="customRadioInline1" name="title" value="Mr" className="custom-control-input" />
+            <Field type="radio" id="customRadioInline2" name="title" value="Mrs" className="custom-control-input" />
+            <label className="custom-control-label" htmlFor="customRadioInline2">Mrs</label>
+          </div>
         </fieldset>
-        <div>
-          <p> </p>
-        </div>
-        <div>
+        <div className='prive_info'>
           <label htmlFor="name">Name: *</label>
-          <Field id="name" name="username" placeholder="Anna Kuzmina" required />
-
-          <label htmlFor="email">E-mail: *</label>
-          <Field id="mail" name="usermail" placeholder="anna@askme.com" type='email' required />
-
-          <label htmlFor="pwd">Password: *</label>
-          <Field
-            id="pwd" name="password" type="password" required />
+          <Field id="name" name="name" placeholder="Anna Kuzmina" required />
+        </div>
+        <div className='prive_info'>          <label htmlFor="email">E-mail: *</label>
+          <Field id="email" name="email" placeholder="anna@askme.com" type="email" required />
+        </div>
+        <div className='prive_info'>
+          <label htmlFor="password">Password: *</label>
+          <Field id="password" name="password" type="password" required />
         </div>
         <section>
-          <h2>Payment information</h2>
-          <p>
-            <label for="card">
-              <span>Card type:</span>
+          <h3 className='h-form'>Payment information</h3>
+          <p className='card_info'>
+            <label htmlFor="card">
+              <span >Card type:</span>
             </label>
-            <select id="card" name="usercard">
+            <Field as="select" id="card" name="usercard">
               <option value="visa">Visa</option>
               <option value="mc">Mastercard</option>
               <option value="amex">American Express</option>
-            </select>
+            </Field>
           </p>
           <p>
-            <label for="number">
+            <label htmlFor="cardnumber">
               <span>Card number: *</span>
-              <strong><abbr title="required"></abbr></strong>
             </label>
-            <input type='text' id="number" name="cardnumber" placeholder="0000-0000-0000-0000" required></input>
+            <Field type="text" id="cardnumber" name="cardnumber" placeholder="0000-0000-0000-0000" required />
           </p>
           <p>
-            <label for="date">
+            <label htmlFor="expiration">
               <span>Expiration date: *</span>
-              <strong><abbr title="required"></abbr></strong>
-              <em>formatted as mm/yy</em>
+              <em>mm/yy</em>
             </label>
-            <input type="data" id="date" name="expiration" placeholder="MM/YY" required pattern="[0|1][1|2]/[/\d/][/\d/]"></input>
+            <Field type="text" id="expiration" name="expiration" placeholder="MM/YY" required pattern="\d{2}/\d{2}" />
           </p>
         </section>
-
         <p><button type="submit">Validate the payment</button></p>
       </Form>
     </Formik>
