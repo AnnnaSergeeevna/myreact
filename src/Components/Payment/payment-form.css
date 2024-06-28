@@ -10,32 +10,90 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
+Form {
+  padding-left: 15px;
+  width: 800px;
+}
 
 ul {
   list-style-type: none;
 }
 
+.h-form {
+  font-size: larger;
+  padding-left: 15px;
+}
+
+.p-form {
+  padding-left: 15px;
+
+  font-size: smaller;
+}
+
+legend {
+  margin-left: 30px;
+  font-size: larger;
+}
+
 .radio-button {
   display: flex;
-  width: 400px;
-  justify-content: flex-start;
-  grid-gap: 20px;
+  width: 300px;
+  height: 100px;
+  justify-content: space-around;
+  grid-gap: 60px;
+  margin-left: 40px;
+  margin-right: 40px;
+  align-items: center;
   padding-inline-start: 0px;
 }
 
+.prive_info {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  margin-top: 40px;
+}
+
+#name,
+#email,
+#password {
+  width: 260px;
+  height: 1.5rem;
+}
+
+label {
+  padding-left: 15px;
+  width: 130px;
+}
+
 input:invalid {
-  border: 2px dashed rgb(191, 113, 113);
+  border: 2px dashed rgb(140, 110, 90);
 }
 
 input:invalid:required {
-  background: rgb(225, 159, 159);
+  background: rgb(230, 240, 250);
 }
 
 input:valid {
-  border: 2px dashed rgb(191, 113, 113);
+  border: 2px dashed rgb(140, 110, 90);
 }
 
 .fieldset {
-  border: 2px dashed rgb(191, 113, 113);
+  border: 2px dashed rgb(140, 110, 90);
+}
 
+.card_info {
+  margin-top: 20px;
+}
+
+select {
+  margin: 10px;
+  list-style: circle;
+  color: rgb(140, 110, 90);
+  font-size: large;
+}
+
+#card option {
+  background-color: white;
+  color: black;
 }

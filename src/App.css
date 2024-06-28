@@ -17,7 +17,7 @@ input:valid {
 
 .light {
   background-color: white;
-  color: rgb(142, 9, 9);
+  color: rgb(140, 110, 90);
 }
 
 .App-wrapper {
@@ -31,6 +31,7 @@ input:valid {
     "nav prof"
     "foot foot";
   font-family: serif;
+  color: rgb(140, 110, 90);
 }
 
 .head,
@@ -53,7 +54,7 @@ input:valid {
   overflow-y: scroll;
 
   background-color: white;
-  color: rgb(142, 9, 9);
+  color: rgb(140, 110, 90);
   font-size: x-large;
   text-align: left;
   padding-left: 10px;
@@ -76,7 +77,7 @@ h2 {
 .foodPlanLink {
   display: flex;
   font-size: xx-large;
-  background-color: #8e0909;
+  background-color: rgb(140, 110, 90);
   justify-content: center;
 }
 
@@ -100,13 +101,13 @@ h2 {
   width: 80%;
   margin: 10px 10px 10px 10px;
   transition: transform 0.3s;
-  border: 2px solid rgb(142, 9, 9);
+  border: 2px solid rgb(140, 110, 90);
 
   cursor: pointer;
 }
 
 .gridCont .gridImage.zoomed {
-  border: 2px solid rgb(142, 9, 9);
+  border: 2px solid rgb(140, 110, 90);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -127,7 +128,7 @@ h2 {
   display: flex;
   justify-content: center;
   font-size: 24px;
-  background-color: #8e0909;
+  background-color: rgb(140, 110, 90);
   color: white;
   border: none;
   padding: 10px;
