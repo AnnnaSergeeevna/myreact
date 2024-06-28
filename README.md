@@ -1,4 +1,4 @@
-This is React app with examples my tasks.
+This is React app with examples of my code. Forms, animations, examples using JS functions and methods, play (tic tac toe), etc.
 Check live demo: https://my-react-portfolio-anna-kuz.vercel.app/about
 
 # Getting Started with Create React App
