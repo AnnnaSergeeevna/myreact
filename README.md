@@ -1,5 +1,5 @@
 This is React app with examples of my code. Forms, animations, examples using JS functions and methods, play (tic tac toe), etc.
-Check live demo: https://my-react-portfolio-anna-kuz.vercel.app/about
+Check live demo: https://myreact-au9f-npu2-git-new-annnasergeeevnas-projects.vercel.app
 
 # Getting Started with Create React App
 
