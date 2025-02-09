@@ -7,7 +7,6 @@ import MorseInput from "./MorseInput";
 import { NavLink } from 'react-router-dom';
 
 
-
 function News({ onChange, sliderValue }) {
     const [date, setDate] = useState(new Date());
 

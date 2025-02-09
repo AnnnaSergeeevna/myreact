@@ -17,11 +17,6 @@ import CanvasContainer from "../src/Components/Canvas/CanvasContainer";
 
 
 const App = (props) => {
-  // const [sliderValue, setSliderValue] = useState(0);
-
-  // const handleSliderChange = (value) => {
-  //   setSliderValue(value);
-  // };
   return (
     <div className='App'>
       <div className='App-wrapper'>
