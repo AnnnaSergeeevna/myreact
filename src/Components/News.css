@@ -23,6 +23,7 @@ P .cards {
 .time {
   display: flex;
   justify-content: flex-end;
+  padding: 10px;
 }
 
 .cards li {

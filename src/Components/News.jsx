@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import classes from './News.css';
 import Cards from "./Cards";
 import RNBW from "./RNBW";
+import WAForm from "./Form/WAForm.tsx";
 import MorseInput from "./MorseInput";
 import { NavLink } from 'react-router-dom';
 
@@ -56,6 +57,16 @@ function News({ onChange, sliderValue }) {
                         <NavLink to="/tictactoe" className={navData => navData.isActive ? classes.active : classes.item}>Tic Tac Toe</NavLink>
                     </button>
                 </p>
+                <p>09 Feb 2024, 11:58:00. This is my new feature</p>
+                <p>You can send and receive watsapp messages right here</p>
+                <p>To do that, you'll need To do this, you need to create an instance using the link</p>
+                <a href="https://console.green-api.com/instanceList" target="_blank" rel="noopener noreferrer" style={{ color: "rgb(77, 174, 79)", textDecoration: "none", fontWeight: "bold" }}
+                >
+                    https://console.green-api.com/instanceList
+                </a>
+                <p>and paste in the fields below </p>
+
+                <WAForm />
                 {/* <p>14 Dec 2023, 12:26:00. Make the background a comfortable tone with Slider <Slider onChange={handleSliderChange} sliderValue={sliderValue} /></p> */}
                 <div className="time">{date.toLocaleTimeString()}</div>
             </div >
