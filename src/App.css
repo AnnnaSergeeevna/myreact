@@ -34,6 +34,16 @@ input:valid {
   color: rgb(140, 110, 90);
 }
 
+@media (max-width: 400px) {
+  .App-wrapper {
+    grid-template-areas:
+      "head head"
+      "nav nav"
+      "prof prof"
+      "foot foot";
+  }
+}
+
 .head,
 .foot {
   position: absolute;

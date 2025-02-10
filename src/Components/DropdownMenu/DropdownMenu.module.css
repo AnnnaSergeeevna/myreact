@@ -1,0 +1,106 @@
+.DropdownMenu {
+  grid-area: nav;
+  background-color: rgb(130, 230, 250);
+  color: rgb(255, 251, 251);
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: large;
+}
+
+.menuBttn {
+  display: flex;
+  background-color: rgb(130, 230, 250);
+  color: rgb(255, 251, 251);
+  width: 400px;
+  border: none;
+  border-radius: 0px;
+  font-size: xx-large;
+  line-height: 1.35;
+  padding-left: 15px;
+  transition: transform 0.3s ease;
+  animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+li {
+  background-color: rgb(130, 230, 250);
+  width: 400px;
+  font-size: xx-large;
+  line-height: 1.35;
+  transition: transform 0.3s ease;
+  animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  margin-bottom: 5px;
+}
+
+.scale-in-ver-bottom {
+  -webkit-animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+a:link {
+  color: #FFF;
+  text-decoration: none;
+
+}
+
+a:visited {
+  color: #FFF;
+}
+
+
+.item:hover {
+  color: rgb(140, 110, 90);
+  transform: translateY(5px);
+}
+
+.item:active {
+  color: rgb(140, 110, 90);
+  animation: flip-out-hor-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes flip-out-hor-bottom {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
+}
