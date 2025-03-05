@@ -1,6 +1,8 @@
 
+import { useState, useEffect } from 'react';
 import classes from './App.css';
 import Navbar from '../src/Components/Navbar/Navbar.jsx';
+import DropdownMenu from './Components/DropdownMenu/DropdownMenu.jsx';
 import Footer from '../src/Components/Footer/Footer.jsx';
 import OnlineShop from '../src/Components/OnlineShop/OnlineShop';
 import News from './Components/News';
@@ -17,16 +19,21 @@ import CanvasContainer from "../src/Components/Canvas/CanvasContainer";
 
 
 const App = (props) => {
-  // const [sliderValue, setSliderValue] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
 
-  // const handleSliderChange = (value) => {
-  //   setSliderValue(value);
-  // };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 400);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className='App'>
       <div className='App-wrapper'>
         <HeaderContainer store={props.store} />
-        <Navbar />
+        {isMobile ? <DropdownMenu /> : <Navbar />}
         <div className='App-wrapper-content'>
           <Routes>
             <Route path='/about/:userId?' element={<ProfileContainer store={props.store} />}></Route>

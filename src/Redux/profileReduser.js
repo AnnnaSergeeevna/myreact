@@ -9,8 +9,8 @@ let initialState = {
         { id: 1, message: <><h3>Looking for a job </h3><li> Residing in Málaga.</li> <li> Valid work permit. </li>  <li> Higher education.</li></> },
         {
             id: 2, message: <><h3>Skills:</h3> <ul></ul>
-                <ul>HTML  JavaScript  Cascading Style Sheets (CSS) </ul>
-                <ul>React.js, Redux.js, PostgreSQL, Express</ul>
+                <ul>HTML  JavaScript  Type Script  Cascading Style Sheets (CSS) </ul>
+                <ul>React.js, Next.JS  Redux.js, PostgreSQL, Express</ul>
                 <ul>Bootstrap, Formik, AgGrid, React Router, Yup, Mapbox GL, Figma, Trello, Swagger</ul>
                 <ul>Microsoft Visual Studio Code,  Git,  GitHub,  Node.js, CRA, Webpack</ul>
                 <ul>Responsive Web Design; Web Accessibility; Cross-browser Compatibility; </ul>

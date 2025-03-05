@@ -1,4 +1,4 @@
-.nav {
+.DropdownMenu {
   grid-area: nav;
   background-color: rgb(130, 230, 250);
   color: rgb(255, 251, 251);
@@ -7,14 +7,28 @@
   font-size: large;
 }
 
-.item {
+.menuBttn {
+  display: flex;
   background-color: rgb(130, 230, 250);
   color: rgb(255, 251, 251);
-  padding-top: 15px;
+  width: 400px;
+  border: none;
+  border-radius: 0px;
+  font-size: xx-large;
+  line-height: 1.35;
+  padding-left: 15px;
+  transition: transform 0.3s ease;
+  animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+li {
+  background-color: rgb(130, 230, 250);
+  width: 400px;
   font-size: xx-large;
   line-height: 1.35;
   transition: transform 0.3s ease;
   animation: scale-in-ver-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  margin-bottom: 5px;
 }
 
 .scale-in-ver-bottom {

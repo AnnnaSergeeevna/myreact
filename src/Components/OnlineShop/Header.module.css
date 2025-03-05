@@ -1,6 +1,7 @@
 .head {
   font-family: Helvetica;
-  background-color: (245, 244, 244);
+  color: rgb(140, 110, 90);
+  border-bottom: 1px ridge rgb(140, 110, 90);
   font-size: xx-large;
   margin-bottom: 40px;
 }
